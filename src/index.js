@@ -132,11 +132,53 @@
 // console.log(arr3);
 
 // 配列のコピー、結合
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
-const arr6 = [...arr4];
-console.log(arr6);
+// const arr6 = [...arr4];
+// console.log(arr6);
 
-const arr7 = [...arr4, ...arr5];
-console.log(arr7);
+// const arr7 = [...arr4, ...arr5];
+// console.log(arr7);
+
+/**
+ * mapやfilterを使った配列の処理
+ */
+// 従来のfor文を使った方法
+// const nameArr = ["田中", "山田", "佐々木"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(nameArr[index]);
+// }
+
+// mapを使った方法
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+// console.log(nameArr2);
+
+// nameArr.map((name) => console.log(name));
+
+// filterの使用  --returnの後に条件をかく
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num % 2 === 1;
+// });
+// console.log(newNumArr);
+
+// 従来のfor文を使った方法
+const nameArr = ["田中", "山田", "佐々木"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index + 1}番目は${nameArr[index]}です`);
+// }
+
+// mapを使った方法
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+
+const newNameArr = nameArr.map((name) => {
+  if (name === "佐々木") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameArr);
